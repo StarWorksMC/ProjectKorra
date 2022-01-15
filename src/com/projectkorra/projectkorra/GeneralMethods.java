@@ -2029,6 +2029,7 @@ public class GeneralMethods {
 		final boolean respectResidence = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.Residence.Respect");
 		final boolean respectKingdoms = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.Kingdoms.Respect");
 		final boolean respectRedProtect = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.RedProtect");
+		final boolean respectLands = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.Lands");
 		final PluginManager pm = Bukkit.getPluginManager();
 
 		final Plugin wgp = pm.getPlugin("WorldGuard");
@@ -2040,6 +2041,7 @@ public class GeneralMethods {
 		final Plugin residence = pm.getPlugin("Residence");
 		final Plugin kingdoms = pm.getPlugin("Kingdoms");
 		final Plugin redprotect = pm.getPlugin("RedProtect");
+		final Plugin lands = pm.getPlugin("Lands");
 
 		if (wgp != null && respectWorldGuard) {
 			writeToDebug("WorldGuard v" + wgp.getDescription().getVersion());
@@ -2067,6 +2069,9 @@ public class GeneralMethods {
 		}
 		if (redprotect != null && respectRedProtect) {
 			writeToDebug("RedProtect v" + redprotect.getDescription().getVersion());
+		}
+		if (lands != null && respectLands) {
+			writeToDebug("Lands v" + redprotect.getDescription().getVersion());
 		}
 
 		writeToDebug("");

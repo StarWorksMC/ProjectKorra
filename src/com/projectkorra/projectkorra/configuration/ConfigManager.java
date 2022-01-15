@@ -619,6 +619,7 @@ public class ConfigManager {
 			config.addDefault("Properties.RegionProtection.Kingdoms.ProtectDuringInvasions", false);
 			config.addDefault("Properties.RegionProtection.RespectPlotSquared", true);
 			config.addDefault("Properties.RegionProtection.RespectRedProtect", true);
+			config.addDefault("Properties.RegionProtection.RespectLands", true);
 			config.addDefault("Properties.RegionProtection.CacheBlockTime", 5000);
 
 			config.addDefault("Properties.Air.CanBendWithWeapons", false);
