@@ -17,7 +17,7 @@
       <id>sk89q-repo</id>
       <url>https://maven.sk89q.com/repo/</url>
     </repository>
-    <!-- GriefPrevention and Towny Repo -->
+    <!-- GriefPrevention, Towny, Lands Repo -->
     <repository>
       <id>jitpack.io</id>
       <url>https://jitpack.io</url>
@@ -181,7 +181,7 @@
     <dependency>
         <groupId>com.github.angeschossen</groupId>
         <artifactId>LandsAPI</artifactId>
-        <version>5.15.2</version>
+        <version>5.25.7</version>
         <scope>provided</scope>
     </dependency>
   </dependencies>

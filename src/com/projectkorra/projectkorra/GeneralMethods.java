@@ -1550,6 +1550,7 @@ public class GeneralMethods {
 		final boolean respectResidence = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.Residence.Respect");
 		final boolean respectKingdoms = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.Kingdoms.Respect");
 		final boolean respectRedProtect = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.RespectRedProtect");
+		final boolean respectLands = ConfigManager.defaultConfig.get().getBoolean("Properties.RegionProtection.Lands");
 
 		boolean isIgnite = false;
 		boolean isExplosive = false;
@@ -1579,6 +1580,7 @@ public class GeneralMethods {
 		final Plugin residence = pm.getPlugin("Residence");
 		final Plugin kingdoms = pm.getPlugin("Kingdoms");
 		final Plugin redprotect = pm.getPlugin("RedProtect");
+		final Plugin lands = pm.getPlugin("Lands");
 
 		for (final Location location : new Location[] { loc, player.getLocation() }) {
 			final World world = location.getWorld();
@@ -2071,7 +2073,7 @@ public class GeneralMethods {
 			writeToDebug("RedProtect v" + redprotect.getDescription().getVersion());
 		}
 		if (lands != null && respectLands) {
-			writeToDebug("Lands v" + redprotect.getDescription().getVersion());
+			writeToDebug("Lands v" + lands.getDescription().getVersion());
 		}
 
 		writeToDebug("");
